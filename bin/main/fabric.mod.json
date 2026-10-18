@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "example",
+  "version": "1.0.0",
+  "entrypoints": {
+    "main": [
+      "com.example.Mod"
+    ]
+  }
+}

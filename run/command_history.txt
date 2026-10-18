@@ -1,0 +1,23 @@
+/give @a example:suspicious_substance
+/effect give @a minecraft:hunger 1 1
+/effect give @a minecraft:hunger 10
+/effect give @a minecraft:hunger 100
+/posteffect add @a minecraft:blur
+/posteffect add @a minecraft:
+/posteffect clear
+/posteffect clear @a
+/posteffect add @a minecraft:creeper
+/posteffect clear @a
+/posteffect add @a minecraft:entity_outline
+/posteffect clear @a
+/posteffect add @a minecraft
+/posteffect clear @a
+/posteffect add @a minecraft:spider
+/posteffect clear @a
+/effect give @a minecraft:instant_health 10 10
+/give @a example:guidite_helmet
+/summon minecraft:lightning_bolt ~ ~ ~
+/effect give @a minecraft:instant_health 10 10
+/gamerule keep_inventory
+/gamerule keep_inventory true
+/summon minecraft:lightning_bolt ~ ~ ~

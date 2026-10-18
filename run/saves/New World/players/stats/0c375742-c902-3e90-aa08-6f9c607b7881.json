@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "example:suspicious_substance": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 590,
+      "minecraft:total_world_time": 606,
+      "minecraft:leave_game": 1,
+      "minecraft:damage_taken": 100,
+      "minecraft:play_time": 590,
+      "minecraft:jump": 7,
+      "minecraft:time_since_death": 590
+    }
+  },
+  "DataVersion": 5023
+}

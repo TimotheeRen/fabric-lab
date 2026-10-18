@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "minecraft:pig": 3
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1006,
+      "minecraft:walk_one_cm": 2841,
+      "minecraft:total_world_time": 1024,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 6067,
+      "minecraft:mob_kills": 3,
+      "minecraft:sneak_time": 8,
+      "minecraft:play_time": 1006,
+      "minecraft:damage_dealt": 300,
+      "minecraft:jump": 12,
+      "minecraft:time_since_death": 1006
+    },
+    "minecraft:used": {
+      "minecraft:pig_spawn_egg": 2,
+      "example:guidite_sword": 6
+    },
+    "minecraft:picked_up": {
+      "minecraft:porkchop": 6
+    }
+  },
+  "DataVersion": 5023
+}

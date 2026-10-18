@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 443,
+      "minecraft:walk_one_cm": 1394,
+      "minecraft:total_world_time": 492,
+      "minecraft:leave_game": 1,
+      "minecraft:damage_taken": 37,
+      "minecraft:play_time": 443,
+      "minecraft:damage_dealt": 100,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 443
+    },
+    "minecraft:used": {
+      "example:guidite_sword": 2
+    }
+  },
+  "DataVersion": 5023
+}

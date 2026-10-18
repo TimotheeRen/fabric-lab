@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 390,
+      "minecraft:walk_one_cm": 409,
+      "minecraft:total_world_time": 407,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 390,
+      "minecraft:time_since_death": 390,
+      "minecraft:drop": 1
+    },
+    "minecraft:dropped": {
+      "example:suspicious_substance": 1
+    },
+    "minecraft:picked_up": {
+      "example:suspicious_substance": 1
+    }
+  },
+  "DataVersion": 5023
+}
