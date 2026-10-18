@@ -21,3 +21,4 @@
 /gamerule keep_inventory
 /gamerule keep_inventory true
 /summon minecraft:lightning_bolt ~ ~ ~
+/posteffect remove Player538 minecraft:blur
