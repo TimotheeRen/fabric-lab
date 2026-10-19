@@ -5,6 +5,9 @@
   "entrypoints": {
     "main": [
       "com.example.Mod"
+    ],
+    "client": [
+      "com.example.ModHud"
     ]
   }
 }

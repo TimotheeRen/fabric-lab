@@ -19,9 +19,11 @@ public class Mod implements ModInitializer {
     ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
       ServerPlayer player = handler.getPlayer();
       LOGGER.info(player.toString());
-      if (ModServer.bossEvent != null) {
-        ModServer.bossEvent.addPlayer(player);
-      }
+      /*
+       * if (ModServer.bossEvent != null) {
+       * ModServer.bossEvent.addPlayer(player);
+       * }
+       */
       // player.addPostEffect(Identifier.fromNamespaceAndPath("minecraft", "blur"));
     });
     ModItems.initialize();
