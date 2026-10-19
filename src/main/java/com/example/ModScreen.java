@@ -1,17 +1,41 @@
 
 package com.example;
 
-import org.joml.Matrix3x2fStack;
+import java.util.Optional;
+
+import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
-import net.minecraft.util.Mth;
+import net.minecraft.resources.Identifier;
 
 public class ModScreen extends Screen {
 
   private float totalTickProgress = 0.0F;
   private long lastFrameNanos = System.nanoTime();
+
+  private static final Identifier WHITE_PIXEL = Identifier.fromNamespaceAndPath(
+      "example",
+      "textures/gui/white.png");
+
+  private static final RenderPipeline ROUNDED_RECT = RenderPipelines.register(
+      RenderPipeline.builder(
+          RenderPipelines.GUI_TEXTURED_SNIPPET)
+          .withLocation(
+              Identifier.fromNamespaceAndPath(
+                  "example",
+                  "pipeline/rounded_rect"))
+          .withVertexShader(
+              Identifier.fromNamespaceAndPath(
+                  "example",
+                  "core/rounded_rect"))
+          .withFragmentShader(
+              Identifier.fromNamespaceAndPath(
+                  "example",
+                  "core/rounded_rect"))
+          .build());
 
   public ModScreen() {
     super(Component.literal("My screen"));
@@ -27,46 +51,20 @@ public class ModScreen extends Screen {
       float delta) {
     super.extractRenderState(graphics, mouseX, mouseY, delta);
 
-    graphics.fill(
-        0, 0, this.width, this.height,
-        0xFF101018);
+    int x = 20;
+    int y = 20;
+    int w = this.width - 40;
+    int h = this.height - 40;
 
-    graphics.text(
-        this.font,
-        "ModScreen is rendering",
-        10, 10,
-        0xFFFFFFFF,
-        false);
-
-    long now = System.nanoTime();
-
-    float elapsedSeconds = (now - lastFrameNanos) / 1_000_000_000.0F;
-
-    lastFrameNanos = now;
-
-    totalTickProgress += elapsedSeconds * 20.0F;
-
-    Matrix3x2fStack matrices = graphics.pose();
-
-    matrices.pushMatrix();
-
-    float scaleAmount = Mth.sin(totalTickProgress / 10.0F) / 2.0F + 1.5F;
-
-    float rotationAmount = totalTickProgress / 50.0F;
-
-    matrices.translate(
-        this.width / 2.0F,
-        this.height / 2.0F);
-
-    matrices.rotate(rotationAmount);
-    matrices.scale(scaleAmount, scaleAmount);
-    matrices.translate(-20.0F, -20.0F);
-
-    graphics.fill(
-        0, 0,
-        40, 40,
-        0xFFFF5555);
-
-    matrices.popMatrix();
+    if (w > 0 && h > 0) {
+      graphics.blit(
+          ROUNDED_RECT,
+          WHITE_PIXEL,
+          x, y,
+          0.0F, 0.0F,
+          w, h,
+          w, h,
+          0xAA101018);
+    }
   }
 }

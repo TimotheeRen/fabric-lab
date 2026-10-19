@@ -1,10 +1,4 @@
 {
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:plains": "2026-10-19 07:35:51 +0200"
-    },
-    "done": false
-  },
   "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-10-19 07:35:50 +0200"
@@ -101,12 +95,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/crafting_table": {
-    "criteria": {
-      "unlock_right_away": "2026-10-19 07:35:51 +0200"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/stone_brick_wall_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-10-19 07:35:50 +0200"
@@ -170,6 +158,18 @@
   "minecraft:recipes/redstone/stone_pressure_plate": {
     "criteria": {
       "has_stone": "2026-10-19 07:35:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2026-10-19 07:35:51 +0200"
+    },
+    "done": false
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-10-19 07:35:51 +0200"
     },
     "done": true
   },
