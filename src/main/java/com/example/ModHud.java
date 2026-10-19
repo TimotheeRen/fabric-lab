@@ -1,27 +1,37 @@
 
 package com.example;
 
-import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
+import org.joml.Matrix3x2fStack;
 
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
-import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
-
-import org.joml.Matrix3x2fStack;
 
 public class ModHud implements ClientModInitializer {
   private float totalTickProgress = 0.0F;
+  private boolean screenOpened = false;
 
   @Override
   public void onInitializeClient() {
     Mod.LOGGER.info("Fabric Client starting...");
-    HudElementRegistry.attachElementBefore(
-        VanillaHudElements.CHAT,
-        Identifier.fromNamespaceAndPath("example", "animated_hud"),
-        this::render);
+
+    ClientTickEvents.END_CLIENT_TICK.register(client -> {
+
+      if (client.player == null || client.level == null) {
+        screenOpened = false;
+        return;
+      }
+
+      if (!screenOpened) {
+        screenOpened = true;
+
+        Mod.LOGGER.info("Opening ModScreen");
+
+        client.gui.setScreen(new ModScreen());
+      }
+    });
   }
 
   private void render(
