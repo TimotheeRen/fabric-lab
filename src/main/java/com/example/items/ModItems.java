@@ -1,4 +1,4 @@
-package com.example;
+package com.example.items;
 
 import java.util.function.Function;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;

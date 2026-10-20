@@ -1,4 +1,4 @@
-package com.example;
+package com.example.ui;
 
 import net.minecraft.network.chat.Component;
 

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.items;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;

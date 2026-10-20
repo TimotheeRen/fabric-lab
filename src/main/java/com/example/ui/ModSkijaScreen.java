@@ -1,5 +1,5 @@
 
-package com.example;
+package com.example.ui;
 
 import java.awt.Color;
 

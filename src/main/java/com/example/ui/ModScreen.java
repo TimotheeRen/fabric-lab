@@ -1,21 +1,16 @@
 
-package com.example;
+package com.example.ui;
 
-import java.util.Optional;
-
+import com.example.Mod;
 import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
-import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
 public class ModScreen extends Screen {
-
-  private float totalTickProgress = 0.0F;
-  private long lastFrameNanos = System.nanoTime();
 
   private static final Identifier WHITE_PIXEL = Identifier.fromNamespaceAndPath(
       "example",

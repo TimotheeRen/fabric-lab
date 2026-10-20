@@ -7,7 +7,7 @@
       "com.example.Mod"
     ],
     "client": [
-      "com.example.ModHud"
+      "com.example.ModClient"
     ]
   }
 }
