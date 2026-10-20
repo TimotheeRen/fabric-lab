@@ -29,7 +29,7 @@ public class ModHud implements ClientModInitializer {
 
         Mod.LOGGER.info("Opening ModScreen");
 
-        client.gui.setScreen(new ModScreen());
+        client.gui.setScreen(new ModSkijaScreen());
       }
     });
   }

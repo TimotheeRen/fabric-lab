@@ -2,11 +2,19 @@ plugins {
 	id 'net.fabricmc.fabric-loom' version '1.18-SNAPSHOT'
 }
 
+repositories {
+    maven {
+        url = 'https://jitpack.io'
+    }
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
   implementation("io.github.humbleui:skija-linux-x64:0.143.18")
+  implementation("net.fabricmc:fabric-language-kotlin:1.14.2+kotlin.2.4.21")
+  implementation("com.github.DreamcastERA1.BlackSkija:blackskija-26.3:3.0.0")
 }
 
 javadoc {
