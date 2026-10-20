@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
@@ -66,5 +67,7 @@ public class ModScreen extends Screen {
           w, h,
           0xAA101018);
     }
+    Button button = new Button(this.width / 2 - 30, this.height / 2 - 15, 60, 30, Component.literal("Click me"));
+    this.addRenderableWidget(button);
   }
 }
