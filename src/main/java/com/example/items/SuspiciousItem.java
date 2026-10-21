@@ -7,6 +7,7 @@ import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
@@ -21,6 +22,14 @@ public class SuspiciousItem extends Item {
     LightningBolt lightningBolt = new LightningBolt(EntityTypes.LIGHTNING_BOLT, level);
     lightningBolt.setPos(new Vec3(frontOfPlayer));
     level.addFreshEntity(lightningBolt);
+    ItemStack stack = user.getItemInHand(hand);
+    if (level.isClientSide()) {
+      return InteractionResult.SUCCESS;
+    }
+    ComponentWithTooltip component = stack.getOrDefault(ModItemIds.CLICK_COUNT_COMPONENT, new ComponentWithTooltip(0));
+    int count = component.clickCount() + 1;
+    stack.set(ModItemIds.CLICK_COUNT_COMPONENT, new ComponentWithTooltip(count));
+
     return InteractionResult.SUCCESS;
   }
 }

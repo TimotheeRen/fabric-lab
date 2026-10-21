@@ -2,6 +2,8 @@ package com.example.items;
 
 import java.util.Map;
 
+import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -9,12 +11,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.level.block.Block;
 
 public class ModItemIds {
   public static final ResourceKey<Item> SUSPICIOUS_SUBSTANCE = create("suspicious_substance");
@@ -44,6 +46,11 @@ public class ModItemIds {
       ArmorType.LEGGINGS, 6,
       ArmorType.BOOTS, 3), 5,
       SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.5F, REPAIRS_GUIDITE_ARMOR, GUIDITE_ARMOR_MATERIAL_KEY);
+
+  public static final DataComponentType<ComponentWithTooltip> CLICK_COUNT_COMPONENT = Registry
+      .register(BuiltInRegistries.DATA_COMPONENT_TYPE, Identifier.fromNamespaceAndPath("example", "click_count"),
+          DataComponentType.<ComponentWithTooltip>builder().persistent(ComponentWithTooltip.CODEC)
+              .networkSynchronized(ComponentWithTooltip.STREAM_CODEC).build());
 
   public static ResourceKey<Item> create(String name) {
     return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("example", name));

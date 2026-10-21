@@ -23,7 +23,7 @@ public class ModItems {
       .build();
   public static final FoodProperties POISON_FOOD_COMPONENT = new FoodProperties.Builder().alwaysEdible().build();
   public static final Item SUSPICIOUS_SUBSTANCE = register(ModItemIds.SUSPICIOUS_SUBSTANCE, SuspiciousItem::new,
-      new Item.Properties()
+      new Item.Properties().component(ModItemIds.CLICK_COUNT_COMPONENT, new ComponentWithTooltip(0))
           .compostable(ResourceKey.create(Registries.CONTEXT_INT_PROVIDER,
               Identifier.fromNamespaceAndPath("example", "cooking/burn_time_poison")))
           .cookingFuel(

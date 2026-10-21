@@ -4,5 +4,7 @@
   "item.example.guidite_helmet": "Guidite Helmet",
   "item.example.guidite_chestplate": "Guidite Chestplate",
   "item.example.guidite_leggings": "Guidite Leggins",
-  "item.example.guidite_boots": "Guidite Boots"
+  "item.example.guidite_boots": "Guidite Boots",
+  "item.example.counter": "Counter",
+  "item.example.counter.info": "Used %1$s times"
 }

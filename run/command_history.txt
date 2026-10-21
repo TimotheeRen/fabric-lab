@@ -22,3 +22,6 @@
 /gamerule keep_inventory true
 /summon minecraft:lightning_bolt ~ ~ ~
 /posteffect remove Player538 minecraft:blur
+/give @a minecraft:diamond[example:click_count=0]
+/give @a minecraft:diamond[example:click_count=-1]
+/give @a minecraft:diamond[example:click_count=3]
