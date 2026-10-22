@@ -1,0 +1,51 @@
+package com.example.blocks;
+
+import org.jetbrains.annotations.Nullable;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
+
+public class CounterBlock extends BaseEntityBlock {
+  public CounterBlock(Properties settings) {
+    super(settings);
+  }
+
+  @Nullable
+  @Override
+  public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+    return new CounterBlockEntity(pos, state);
+  }
+
+  @Override
+  protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player,
+      BlockHitResult hit) {
+    if (!(level.getBlockEntity(pos) instanceof CounterBlockEntity counterBlockEntity)) {
+      return super.useWithoutItem(state, level, pos, player, hit);
+    }
+
+    counterBlockEntity.incrementClicks();
+
+    if (level.isClientSide()) {
+      player.sendOverlayMessage(
+          Component.literal("You've clicked the block for the " + counterBlockEntity.getClicks() + "th time."));
+    }
+
+    return InteractionResult.SUCCESS;
+  }
+
+  @Nullable
+  @Override
+  public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
+      BlockEntityType<T> type) {
+    return createTickerHelper(type, ModBlocksEntities.COUNTER_BLOCK_ENTITY, CounterBlockEntity::tick);
+  }
+}

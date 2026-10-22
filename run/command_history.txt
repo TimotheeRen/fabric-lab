@@ -30,3 +30,5 @@
 /enchant @a minecraft:fortune 3
 /give @a example:prismarine_lamp
 /time set minecraft:midnight
+/time set day
+/give @a example:counter_block

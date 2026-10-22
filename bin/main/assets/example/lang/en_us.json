@@ -8,5 +8,6 @@
   "item.example.counter": "Counter",
   "item.example.counter.info": "Used %1$s times",
   "block.example.condensed_dirt": "Condensed Dirt",
-  "block.example.condensed_oak_log": "Condensed oak log"
+  "block.example.condensed_oak_log": "Condensed oak log",
+  "block.example.prismarine_lamp": "Prismarine Lamp"
 }

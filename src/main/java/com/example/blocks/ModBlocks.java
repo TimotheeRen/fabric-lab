@@ -18,12 +18,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 public class ModBlocks {
   public static final Block CONDENSED_DIRT = register(BlockItemIds.CONDENSED_DIRT, Block::new,
       BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F).sound(SoundType.GRASS));
-
   public static final Block CONDENSED_OAK_LOG = register(BlockItemIds.CONDENSED_OAK_LOG, RotatedPillarBlock::new,
       BlockBehaviour.Properties.of().sound(SoundType.WOOD));
-
   public static final Block PRISMARINE_LAMP = register(BlockItemIds.PRISMARINE_LAMP, PrismarineLampBlock::new,
       BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(PrismarineLampBlock::getLuminance));
+  public static final Block COUNTER_BLOCK = register(BlockItemIds.COUNTER_BLOCK, CounterBlock::new,
+      BlockBehaviour.Properties.of());
 
   private static Block register(ResourceKey<Block> id, Function<BlockBehaviour.Properties, Block> blockFactory,
       BlockBehaviour.Properties properties) {
@@ -44,6 +44,7 @@ public class ModBlocks {
       creativeTab.accept(ModBlocks.CONDENSED_DIRT.asItem());
       creativeTab.accept(ModBlocks.CONDENSED_OAK_LOG.asItem());
       creativeTab.accept(ModBlocks.PRISMARINE_LAMP.asItem());
+      creativeTab.accept(ModBlocks.COUNTER_BLOCK.asItem());
     });
   }
 }

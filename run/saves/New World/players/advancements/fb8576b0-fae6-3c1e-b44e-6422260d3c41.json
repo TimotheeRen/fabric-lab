@@ -1,10 +1,4 @@
 {
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:plains": "2026-10-19 13:23:45 +0200"
-    },
-    "done": false
-  },
   "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2026-10-19 13:23:27 +0200"
@@ -172,6 +166,12 @@
       "has_stone": "2026-10-19 13:23:27 +0200"
     },
     "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2026-10-19 13:23:45 +0200"
+    },
+    "done": false
   },
   "DataVersion": 5023
 }

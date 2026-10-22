@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.example.blocks.ModBlocks;
+import com.example.blocks.ModBlocksEntities;
 import com.example.items.ModItemIds;
 import com.example.items.ModItems;
 
@@ -35,5 +36,6 @@ public class Mod implements ModInitializer {
     });
     ModItems.initialize();
     ModBlocks.initialize();
+    ModBlocksEntities.initialize();
   }
 }

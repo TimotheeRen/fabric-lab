@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "example:prismarine_lamp": 1
+    },
+    "minecraft:picked_up": {
+      "example:prismarine_lamp": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 796,
+      "minecraft:walk_one_cm": 193,
+      "minecraft:total_world_time": 885,
+      "minecraft:play_time": 796,
+      "minecraft:time_since_death": 796,
+      "minecraft:drop": 1
+    }
+  },
+  "DataVersion": 5023
+}
