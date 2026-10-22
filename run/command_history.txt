@@ -25,3 +25,6 @@
 /give @a minecraft:diamond[example:click_count=0]
 /give @a minecraft:diamond[example:click_count=-1]
 /give @a minecraft:diamond[example:click_count=3]
+/time set day
+/enchant @a minecraft:efficiency 5
+/enchant @a minecraft:fortune 3

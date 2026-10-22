@@ -3,6 +3,7 @@ package com.example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.example.blocks.ModBlocks;
 import com.example.items.ModItemIds;
 import com.example.items.ModItems;
 
@@ -33,5 +34,6 @@ public class Mod implements ModInitializer {
       // player.addPostEffect(Identifier.fromNamespaceAndPath("minecraft", "blur"));
     });
     ModItems.initialize();
+    ModBlocks.initialize();
   }
 }

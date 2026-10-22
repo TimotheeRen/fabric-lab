@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 549,
+      "minecraft:walk_one_cm": 1845,
+      "minecraft:total_world_time": 562,
+      "minecraft:leave_game": 1,
+      "minecraft:damage_taken": 44,
+      "minecraft:crouch_one_cm": 9,
+      "minecraft:sneak_time": 14,
+      "minecraft:play_time": 549,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 549,
+      "minecraft:drop": 1
+    },
+    "minecraft:dropped": {
+      "example:suspicious_substance": 1
+    },
+    "minecraft:picked_up": {
+      "example:suspicious_substance": 1
+    },
+    "minecraft:used": {
+      "example:condensed_dirt": 1
+    }
+  },
+  "DataVersion": 5023
+}

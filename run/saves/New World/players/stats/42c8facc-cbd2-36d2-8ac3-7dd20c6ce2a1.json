@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:arrow": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:arrow": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2646,
+      "minecraft:walk_one_cm": 5520,
+      "minecraft:total_world_time": 2660,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 2646,
+      "minecraft:time_since_death": 2646,
+      "minecraft:drop": 1
+    },
+    "minecraft:used": {
+      "example:condensed_dirt": 28
+    },
+    "minecraft:mined": {
+      "example:condensed_dirt": 3
+    }
+  },
+  "DataVersion": 5023
+}
