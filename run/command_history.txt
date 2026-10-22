@@ -28,3 +28,5 @@
 /time set day
 /enchant @a minecraft:efficiency 5
 /enchant @a minecraft:fortune 3
+/give @a example:prismarine_lamp
+/time set minecraft:midnight

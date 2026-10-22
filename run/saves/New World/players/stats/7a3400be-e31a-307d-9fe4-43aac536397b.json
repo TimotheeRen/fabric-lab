@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "example:condensed_oak_log": 4
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 106,
+      "minecraft:total_world_time": 106,
+      "minecraft:leave_game": 1,
+      "minecraft:sneak_time": 1,
+      "minecraft:play_time": 106,
+      "minecraft:time_since_death": 106
+    }
+  },
+  "DataVersion": 5023
+}

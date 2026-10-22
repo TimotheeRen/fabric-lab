@@ -22,6 +22,9 @@ public class ModBlocks {
   public static final Block CONDENSED_OAK_LOG = register(BlockItemIds.CONDENSED_OAK_LOG, RotatedPillarBlock::new,
       BlockBehaviour.Properties.of().sound(SoundType.WOOD));
 
+  public static final Block PRISMARINE_LAMP = register(BlockItemIds.PRISMARINE_LAMP, PrismarineLampBlock::new,
+      BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(PrismarineLampBlock::getLuminance));
+
   private static Block register(ResourceKey<Block> id, Function<BlockBehaviour.Properties, Block> blockFactory,
       BlockBehaviour.Properties properties) {
     Block block = blockFactory.apply(properties.setId(id));
@@ -40,6 +43,7 @@ public class ModBlocks {
     CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> {
       creativeTab.accept(ModBlocks.CONDENSED_DIRT.asItem());
       creativeTab.accept(ModBlocks.CONDENSED_OAK_LOG.asItem());
+      creativeTab.accept(ModBlocks.PRISMARINE_LAMP.asItem());
     });
   }
 }

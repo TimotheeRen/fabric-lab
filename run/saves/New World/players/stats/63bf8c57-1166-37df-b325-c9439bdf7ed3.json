@@ -1,0 +1,15 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 761,
+      "minecraft:total_world_time": 777,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 761,
+      "minecraft:time_since_death": 761
+    },
+    "minecraft:used": {
+      "example:prismarine_lamp": 7
+    }
+  },
+  "DataVersion": 5023
+}
